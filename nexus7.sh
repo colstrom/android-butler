@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
+# Copyright (c) 2012 Chris Olstrom <chris@olstrom.com>
+# See included LICENSE file for details.
 
 # add repository
 sudo add-apt-repository ppa:ubuntu-nexus7/ubuntu-nexus7-installer
