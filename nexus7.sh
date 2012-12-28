@@ -3,7 +3,7 @@
 # add repository
 sudo add-apt-repository ppa:ubuntu-nexus7/ubuntu-nexus7-installer
 sudo apt-get update
-sudo apt-get install android-tools-fastboot android-tools-adb
+sudo apt-get install curl android-tools-fastboot android-tools-adb
 
 # create directories
 mkdir files
