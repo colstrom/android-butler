@@ -3,6 +3,10 @@ android-butler
 
 Automation scripts for new devices.
 
+!!! WARNING !!!
+===============
+This script is intended to be used with a new device, and as such, assumes you have no data you wish to preserve.
+
 Features
 --------
 * Unlocks your Nexus 7.
