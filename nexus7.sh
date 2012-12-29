@@ -21,7 +21,7 @@ curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 sudo ./tools/fastboot oem unlock
 
 # upgrade to 4.2.1
-tar xzvf factory-image.tgz
+tar xzvf files/factory-image.tgz
 cd nakasi-jop40d
 sed 's/fastboot/..\/tools\/fastboot/' flash-all.sh
 sudo ./flash-all.sh
