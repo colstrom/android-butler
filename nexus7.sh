@@ -9,8 +9,8 @@ sudo apt-get install curl
 mkdir files tools
 
 # fetch binaries
-curl -C - https://dl.google.com/dl/android/aosp/nakasi-jop40d-factory-6ac58a1a.tgz -o files/factory-image.tgz
-curl -C - http://android.downloadspark.com/nexus7/TWRP_multirom_n7_20121220-2.img -o files/recovery.img
+curl -C - https://dl.google.com/dl/android/aosp/nakasi-jop40d-factory-6ac58a1a.tgz -o files/nakasi-jop40d-factory-6ac58a1a.tgz
+curl -C - http://android.downloadspark.com/nexus7/TWRP_multirom_n7_20121220-2.img -o files/TWRP_multirom_n7_20121220-2.img
 curl -C - http://android.downloadspark.com/nexus7/multirom_v3_n7-signed.zip -o files/multirom_v3_n7-signed.zip
 curl -C - http://android.downloadspark.com/nexus7/kernel_kexec_42.zip -o files/kernel_kexec_42.zip
 curl -C - http://android.downloadspark.com/nexus7/CWM-SuperSU-v0.99.zip -o files/CWM-SuperSU-v0.99.zip
@@ -21,13 +21,13 @@ curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 sudo ./tools/fastboot oem unlock
 
 # upgrade to 4.2.1
-tar xzvf files/factory-image.tgz
+tar xzvf files/files/nakasi-jop40d-factory-6ac58a1a.tgz
 cd nakasi-jop40d
 sed 's/fastboot/..\/tools\/fastboot/' flash-all.sh
 sudo ./flash-all.sh
 
 # flash recovery
-sudo ./tools/fastboot flash recovery files/recovery.img
+sudo ./tools/fastboot flash recovery files/TWRP_multirom_n7_20121220-2.img
 
 # create recovery script
 echo install /sdcard/multirom_v3_n7-signed.zip > files/openrecoveryscript
