@@ -41,4 +41,4 @@ sudo ./tools/adb push files/CWM-SuperSU-v0.99.zip /sdcard/CWM-SuperSU-v0.99.zip
 sudo ./tools/adb push files/openrecoveryscript /cache/recovery/openrecoveryscript
 
 # reboot to recovery
-sudo fastboot reboot recovery
+sudo ./tools/fastboot reboot recovery
