@@ -9,13 +9,13 @@ sudo apt-get install curl
 mkdir files tools
 
 # fetch binaries
-curl https://dl.google.com/dl/android/aosp/nakasi-jop40d-factory-6ac58a1a.tgz -o files/factory-image.tgz
-curl http://android.downloadspark.com/nexus7/TWRP_multirom_n7_20121220-2.img -o files/recovery.img
-curl http://android.downloadspark.com/nexus7/multirom_v3_n7-signed.zip -o files/multirom_v3_n7-signed.zip
-curl http://android.downloadspark.com/nexus7/kernel_kexec_42.zip -o files/kernel_kexec_42.zip
-curl http://android.downloadspark.com/nexus7/CWM-SuperSU-v0.99.zip -o files/CWM-SuperSU-v0.99.zip
-curl http://android.downloadspark.com/tools/fastboot -o tools/fastboot
-curl http://android.downloadspark.com/tools/adb -o tools/adb
+curl -C - https://dl.google.com/dl/android/aosp/nakasi-jop40d-factory-6ac58a1a.tgz -o files/factory-image.tgz
+curl -C - http://android.downloadspark.com/nexus7/TWRP_multirom_n7_20121220-2.img -o files/recovery.img
+curl -C - http://android.downloadspark.com/nexus7/multirom_v3_n7-signed.zip -o files/multirom_v3_n7-signed.zip
+curl -C - http://android.downloadspark.com/nexus7/kernel_kexec_42.zip -o files/kernel_kexec_42.zip
+curl -C - http://android.downloadspark.com/nexus7/CWM-SuperSU-v0.99.zip -o files/CWM-SuperSU-v0.99.zip
+curl -C - http://android.downloadspark.com/tools/fastboot -o tools/fastboot
+curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 
 # unlock device
 sudo ./tools/fastboot oem unlock
