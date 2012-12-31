@@ -2,8 +2,8 @@
 # Copyright (c) 2012 Chris Olstrom <chris@olstrom.com>
 # See included LICENSE file for details.
 
-# fetch curl if not already present
-sudo apt-get install curl
+# fetch curl and ia32-libs if not already installed.
+sudo apt-get install curl ia32-libs
 
 # create directories
 mkdir files tools
