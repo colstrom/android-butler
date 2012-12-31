@@ -24,7 +24,7 @@ chmod u+x tools/adb tools/fastboot
 sudo ./tools/fastboot oem unlock
 
 # upgrade to 4.2.1
-tar xzvf files/files/nakasi-jop40d-factory-6ac58a1a.tgz
+tar xzvf files/nakasi-jop40d-factory-6ac58a1a.tgz
 cd nakasi-jop40d
 sed 's/fastboot/..\/tools\/fastboot/' flash-all.sh
 sudo ./flash-all.sh
