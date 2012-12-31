@@ -20,7 +20,9 @@ curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 # set execute bit for tools
 chmod u+x tools/adb tools/fastboot
 
-echo "** ACTION REQUIRED **
+echo "
+** ACTION REQUIRED **
+
 If you have not already done so, please place your device into fastboot mode.
 To do this, power off your device, then hold the volume down button and power it on again.
 Press any key when you have done this."
@@ -37,7 +39,8 @@ sudo ./flash-all.sh
 cd ..
 
 # prompt user and wait for confirmation
-echo "** ACTION REQUIRED **
+echo "
+** ACTION REQUIRED **
 
 Please reboot into fastboot mode once more.
 To do this, power off your device, then hold the volume down button and power it on again.
@@ -53,7 +56,9 @@ echo install /sdcard/kernel_kexec_42.zip >> files/openrecoveryscript
 echo install /sdcard/CWM-SuperSU-v0.99.zip >> files/openrecoveryscript
 
 # prompt user to take action, and wait for confirmation.
-echo "** ACTION REQUIRED **
+echo "
+** ACTION REQUIRED **
+
 Please reboot into recovery mode at this time.
 To do this, use the volume rocker to select 'Recovery mode', and press the power button to confirm the selection.
 Press any key when you have done this."
