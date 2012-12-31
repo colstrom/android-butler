@@ -20,6 +20,12 @@ curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 # set execute bit for tools
 chmod u+x tools/adb tools/fastboot
 
+echo "** ACTION REQUIRED **
+If you have not already done so, please place your device into fastboot mode.
+To do this, power off your device, then hold the volume down button and power it on again.
+Press any key when you have done this."
+read and_ignore
+
 # unlock device
 sudo ./tools/fastboot oem unlock
 
@@ -30,6 +36,14 @@ sed 's/fastboot/..\/tools\/fastboot/' flash-all.sh
 sudo ./flash-all.sh
 cd ..
 
+# prompt user and wait for confirmation
+echo "** ACTION REQUIRED **
+
+Please reboot into fastboot mode once more.
+To do this, power off your device, then hold the volume down button and power it on again.
+Press any key when you have done this."
+read and_ignore
+
 # flash recovery
 sudo ./tools/fastboot flash recovery files/TWRP_multirom_n7_20121220-2.img
 
@@ -39,9 +53,11 @@ echo install /sdcard/kernel_kexec_42.zip >> files/openrecoveryscript
 echo install /sdcard/CWM-SuperSU-v0.99.zip >> files/openrecoveryscript
 
 # prompt user to take action, and wait for confirmation.
-echo "At this point, android-butler needs some help from you. Please select recovery mode using the volume rocker on your device, and press the power button to reboot into it."
-echo "Press [ENTER] when you have done this."
-read
+echo "** ACTION REQUIRED **
+Please reboot into recovery mode at this time.
+To do this, use the volume rocker to select 'Recovery mode', and press the power button to confirm the selection.
+Press any key when you have done this."
+read and_ignore
 
 # push files to device
 sudo ./tools/adb push files/multirom_v3_n7-signed.zip /sdcard/multirom_v3_n7-signed.zip
