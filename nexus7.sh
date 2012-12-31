@@ -28,6 +28,7 @@ tar xzvf files/nakasi-jop40d-factory-6ac58a1a.tgz
 cd nakasi-jop40d
 sed 's/fastboot/..\/tools\/fastboot/' flash-all.sh
 sudo ./flash-all.sh
+cd ..
 
 # flash recovery
 sudo ./tools/fastboot flash recovery files/TWRP_multirom_n7_20121220-2.img
