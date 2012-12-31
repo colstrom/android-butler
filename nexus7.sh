@@ -17,6 +17,9 @@ curl -C - http://android.downloadspark.com/nexus7/CWM-SuperSU-v0.99.zip -o files
 curl -C - http://android.downloadspark.com/tools/fastboot -o tools/fastboot
 curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 
+# set execute bit for tools
+chmod u+x tools/adb tools/fastboot
+
 # unlock device
 sudo ./tools/fastboot oem unlock
 
