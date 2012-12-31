@@ -18,7 +18,8 @@ Features
 
 Requirements
 ------------
-* adb, curl, and fastboot available in $PATH.
+* curl available in $PATH.
+* If running on x86_64, ia32-libs should be installed.
 * These will be installed automatically on Ubuntu 10.04+ and similar distributions (like Mint).
 
 How to Use
