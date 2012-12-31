@@ -38,6 +38,11 @@ echo install /sdcard/multirom_v3_n7-signed.zip > files/openrecoveryscript
 echo install /sdcard/kernel_kexec_42.zip >> files/openrecoveryscript
 echo install /sdcard/CWM-SuperSU-v0.99.zip >> files/openrecoveryscript
 
+# prompt user to take action, and wait for confirmation.
+echo "At this point, android-butler needs some help from you. Please select recovery mode using the volume rocker on your device, and press the power button to reboot into it."
+echo "Press [ENTER] when you have done this."
+read
+
 # push files to device
 sudo ./tools/adb push files/multirom_v3_n7-signed.zip /sdcard/multirom_v3_n7-signed.zip
 sudo ./tools/adb push files/kernel_kexec_42.zip /sdcard//kernel_kexec_42.zip
