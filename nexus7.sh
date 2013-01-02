@@ -66,7 +66,7 @@ read and_ignore
 
 # push files to device
 sudo ./tools/adb push files/multirom_v3_n7-signed.zip /sdcard/multirom_v3_n7-signed.zip
-sudo ./tools/adb push files/kernel_kexec_42.zip /sdcard//kernel_kexec_42.zip
+sudo ./tools/adb push files/kernel_kexec_42.zip /sdcard/kernel_kexec_42.zip
 sudo ./tools/adb push files/CWM-SuperSU-v0.99.zip /sdcard/CWM-SuperSU-v0.99.zip
 sudo ./tools/adb push files/openrecoveryscript /cache/recovery/openrecoveryscript
 
