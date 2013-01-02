@@ -20,6 +20,9 @@ curl -C - http://android.downloadspark.com/tools/adb -o tools/adb
 # set execute bit for tools
 chmod u+x tools/adb tools/fastboot
 
+# install tools globally
+sudo cp tools/adb tools/fastboot /usr/local/bin/
+
 echo "
 ** ACTION REQUIRED **
 
